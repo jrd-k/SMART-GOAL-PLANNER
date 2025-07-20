@@ -4,7 +4,7 @@ import GoalForm from "./GoalForm";
 import DepositForm from "./DepositForm";
 import Overview from "./Overview";
 
-const API = "https://smart-goal-planner-backend.onrender.com";
+const API = "https://smart-goal-planner-backend.onrender.com/goals";
 function App() {
   const [goals, setGoals] = useState([]);
   const [editingGoal, setEditingGoal] = useState(null);
