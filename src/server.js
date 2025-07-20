@@ -1,12 +1,13 @@
-// server.js
 import jsonServer from "json-server";
+
+// src/server.js
+// This file sets up a JSON server to serve the db.json file as a REST API. 
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 4000;
-
+// Set default middlewares (logger, static, cors, no-cache)
 server.use(middlewares);
 server.use(router);
-server.listen(port, () => {
-  console.log(`JSON Server is running on port ${port}`);
+server.listen(3000, () => {
+  console.log("✅ JSON Server is running on port 3000");
 });
